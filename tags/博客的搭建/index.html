@@ -128,71 +128,35 @@
     <div class="section-wrap">
       <div class="container">
         <div class="columns">
-          <main class="main-column">
-<article class="card card-content">
-  <header>
-    <h1 class="post-title">
-      java笔记
-    </h1>
-  </header>
-  <div class="post-meta post-show-meta">
-    <time datetime="2021-11-12T07:09:11.000Z" style="display: flex; align-items: center;">
-      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
-      <span>2021-11-12</span>
-    </time>
-    
-    
-    <span class="dot"></span>
-    <span>309 字</span>
-    
-  </div>
-  
-  <div class="post-meta post-show-meta" style="margin-top: -10px;">
-    <div style="display: flex; align-items: center;">
-      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
-      
-      
-        <a href="/tags/java学习/" class="post-meta-link">java学习</a>
-      
-    </div>
-  </div>
-  
-  </header>
-  <div id="section" class="post-content">
-    <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><pre class="highlight"><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">logicoperator</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(a &gt; <span class="number">20</span> &amp;&amp; a &lt; <span class="number">50</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok100&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> age = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(age &gt; <span class="number">20</span> &amp; age &lt; <span class="number">50</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok200&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">if</span>(b &lt; <span class="number">1</span> &amp;&amp; ++b &lt; <span class="number">5</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok300&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(b);</span><br><span class="line">		<span class="comment">// 对于&amp;&amp;短路与而言，如果第一个条件为false，后面的条件不会在判断</span></span><br><span class="line">		<span class="comment">// 对于&amp;逻辑与而言，如果第一个条件为false，后面的条件仍然会判断</span></span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">if</span>(c &lt; <span class="number">1</span> &amp; ++c &lt; <span class="number">5</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok300&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(c);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> d = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(d &gt; <span class="number">20</span> || d &lt; <span class="number">25</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok400&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> e = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(e &gt; <span class="number">20</span> | e &lt; <span class="number">23</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok500&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 对于||短路或而言，如果第一个条件为true，后面的条件不会在判断,最终结果为true，效率高</span></span><br><span class="line">		<span class="comment">// 对于|逻辑或而言，不管第一个条件是否为true，后面的条件仍然会判断，效率低</span></span><br><span class="line">		<span class="keyword">int</span> f = <span class="number">4</span>;</span><br><span class="line">		<span class="keyword">int</span> h = <span class="number">9</span>;</span><br><span class="line">		<span class="keyword">if</span>(f &gt; <span class="number">1</span> || ++h &gt; <span class="number">4</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok600&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(h);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> g = <span class="number">4</span>;</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">9</span>;</span><br><span class="line">		<span class="keyword">if</span>(g &gt; <span class="number">1</span> | ++y &gt; <span class="number">4</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok700&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(y);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre>
-
-
-  </div>
-  <div>
-  
-  <div class="post-note note-warning copyright" style="margin-top: 42px">
-    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/about">木槿</a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/12/first/">http://example.com/2021/11/12/first/</a></p>
-    <p><span style="font-weight: bold;">版权声明：</span></p>
-  </div>
-  
-  </div>
-</article>
-<div class="nav">
-  
-  <div class="nav-item-prev">
-    <a href="/2021/11/21/java学习，if语句的单双分支/" class="nav-link">
-      <i class="iconfont icon-left nav-prev-icon"></i>
-      <div>
-        <div class="nav-label">上一篇</div>
-        
-        <div class="nav-title">java学习，if语句的单双分支 </div>
-        
-      </div>
-    </a>
-  </div>
-  
-  
+          <main class="main-column"><div class="card card-content tag-page-card">
+  <div class="tags-page-title">标签&nbsp-&nbsp博客的搭建</div>
 </div>
-
-<div class="card card-content toc-card" id="mobiletoc">
-  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
+<div class="archive-timeline">
+  
+  
+    
+      <div class="archive-timeline-tag"><span>2021</span></div>
+      
+    
+    <div class="archive-timeline-item">
+      <div class="archive-timeline-post">
+        <div class="card card-content">
+          <div class="archive-timeline-post-date">2021-11-21</div>
+          <div class="archive-timeline-post-content"><a href="/2021/11/21/博客编写常见错误/" class="archive-timeline-post-item">博客编写常见错误</a></div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="archive-timeline-item">
+      <div class="archive-timeline-post">
+        <div class="card card-content">
+          <div class="archive-timeline-post-date">2021-11-21</div>
+          <div class="archive-timeline-post-content"><a href="/2021/11/21/如何使用hexo搭建博客并部署到Github-0/" class="archive-timeline-post-item">如何使用hexo搭建博客并部署到Github</a></div>
+        </div>
+      </div>
+    </div>
+  
 </div></main>
           <aside class="left-column">
             
@@ -222,13 +186,6 @@
             <div class="sticky-tablet">
   
   
-  <article class="display-when-two-columns spacer">
-    <div class="card card-content toc-card">
-      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
-    </div>
-  </article>
-  
   
   <article class="card card-content">
     <div class="categories-card">
@@ -253,16 +210,50 @@
   </article>
   
   
+  <article class="card card-content widescreen-archive">
+    <div class="archive-card">
+  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+    
+      <a href="/archives/2021" class="archive-card-list-item">
+          2021
+          <span class="archive-card-list-item-badge">5</span>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
 </div>
           </aside>
           <aside class="right-column">
             <div class="sticky-widescreen">
   
-  
-  <article class="card card-content toc-card">
-    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
-  </article>
   
   
   <article class="card card-content">
@@ -294,6 +285,45 @@
 </div>
   </article>
   
+  
+  <article class="card card-content">
+    <div class="archive-card">
+  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+    
+      <a href="/archives/2021" class="archive-card-list-item">
+          2021
+          <span class="archive-card-list-item-badge">5</span>
+      </a>
+    
+  </div>
+</div>
+  </article>
   
 </div>
           </aside>

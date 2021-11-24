@@ -132,36 +132,47 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      
+      java学习，if语句的单双分支
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2021-11-13T13:23:28.313Z" style="display: flex; align-items: center;">
+    <time datetime="2021-11-21T14:30:45.000Z" style="display: flex; align-items: center;">
       <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
-      <span>2021-11-13</span>
+      <span>2021-11-21</span>
     </time>
     
     
     <span class="dot"></span>
-    <span>84 字</span>
+    <span>107 字</span>
     
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/java学习/" class="post-meta-link">java学习</a>
+      
+    </div>
   </div>
   
   </header>
   <div id="section" class="post-content">
-    <h3 id="1-node的下载"><a href="#1-node的下载" class="headerlink" title="1.node的下载"></a>1.node的下载</h3><h3 id="2-git的下载"><a href="#2-git的下载" class="headerlink" title="2.git的下载"></a>2.git的下载</h3><h3 id="3-GitHub的注册"><a href="#3-GitHub的注册" class="headerlink" title="3.GitHub的注册"></a>3.GitHub的注册</h3><h3 id="4-在GitHub上创建仓库"><a href="#4-在GitHub上创建仓库" class="headerlink" title="4.在GitHub上创建仓库"></a>4.在GitHub上创建仓库</h3><h3 id="5-利用hexo创建博客并上传GitHub"><a href="#5-利用hexo创建博客并上传GitHub" class="headerlink" title="5.利用hexo创建博客并上传GitHub"></a>5.利用hexo创建博客并上传GitHub</h3><p>(1)在sources文件下的_posts下创建.md文件，利用Typora编写博客</p>
-<p>(2)打开Git </p>
-<p>​     hexo clean;</p>
-<p>​     hexo g;//生成静态网页</p>
-<p>​     hexo s;//本地浏览</p>
-<p>​      hexo d;//部署到GitHub，上传的密码是SSH key</p>
+    <h3 id="1-单双分支"><a href="#1-单双分支" class="headerlink" title="1.单双分支"></a>1.单双分支</h3><h6 id="（1）if语句"><a href="#（1）if语句" class="headerlink" title="（1）if语句"></a>（1）if语句</h6><p>在编写程序中若出现如下的问题：</p>
+<blockquote>
+<p> 类NestedIf1是公共的, 应在名为 NestedIf1.java 的文件中声明</p>
+</blockquote>
+<p>是因为保存的文件名如类名不一致所导致的。</p>
+<h6 id="2-输出char类型的字符，如何接受"><a href="#2-输出char类型的字符，如何接受" class="headerlink" title="(2)输出char类型的字符，如何接受"></a>(2)输出char类型的字符，如何接受</h6><pre class="highlight"><span class="line">Scanner myScanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="comment">//myScanner 接收键盘输入</span></span><br><span class="line"><span class="keyword">char</span> gender = myScanner.next().charAt(<span class="number">0</span>);</span><br><span class="line"><span class="comment">//将键盘输入的第一个字符赋值给gender</span></span><br></pre>
+
 
   </div>
   <div>
   
   <div class="post-note note-warning copyright" style="margin-top: 42px">
     <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/about">木槿</a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/13/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0GitHub/">http://example.com/2021/11/13/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0GitHub/</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/21/java%E5%AD%A6%E4%B9%A0%EF%BC%8Cif%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%8D%95%E5%8F%8C%E5%88%86%E6%94%AF/">http://example.com/2021/11/21/java%E5%AD%A6%E4%B9%A0%EF%BC%8Cif%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%8D%95%E5%8F%8C%E5%88%86%E6%94%AF/</a></p>
     <p><span style="font-weight: bold;">版权声明：</span></p>
   </div>
   
@@ -170,10 +181,12 @@
 <div class="nav">
   
   <div class="nav-item-prev">
-    <a href="/2021/11/17/java单双分支/" class="nav-link">
+    <a href="/2021/11/21/如何使用hexo搭建博客并部署到Github-0/" class="nav-link">
       <i class="iconfont icon-left nav-prev-icon"></i>
       <div>
         <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">如何使用hexo搭建博客并部署到Github </div>
         
       </div>
     </a>
@@ -196,7 +209,7 @@
 
 <div class="card card-content toc-card" id="mobiletoc">
   <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-node%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">1.node的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">2.git的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GitHub%E7%9A%84%E6%B3%A8%E5%86%8C"><span class="toc-text">3.GitHub的注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8GitHub%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">4.在GitHub上创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E4%B8%8A%E4%BC%A0GitHub"><span class="toc-text">5.利用hexo创建博客并上传GitHub</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%95%E5%8F%8C%E5%88%86%E6%94%AF"><span class="toc-text">1.单双分支</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89if%E8%AF%AD%E5%8F%A5"><span class="toc-text">（1）if语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E8%BE%93%E5%87%BAchar%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%A5%E5%8F%97"><span class="toc-text">(2)输出char类型的字符，如何接受</span></a></li></ol></li></ol></li></ol></li></ol>
 </div></main>
           <aside class="left-column">
             
@@ -208,7 +221,7 @@
 <p class="author-description">designed by xiaofexia</p>
 <div class="author-message">
   <a class="author-posts-count" href="/archives">
-    <span>3</span>
+    <span>5</span>
     <span>文章</span>
   </a>
   <a class="author-categories-count" href="/categories">
@@ -216,7 +229,7 @@
     <span>分类</span>
   </a>
   <a class="author-tags-count" href="/tags">
-    <span>0</span>
+    <span>2</span>
     <span>标签</span>
   </a>
 </div>
@@ -229,7 +242,7 @@
   <article class="display-when-two-columns spacer">
     <div class="card card-content toc-card">
       <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-node%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">1.node的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">2.git的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GitHub%E7%9A%84%E6%B3%A8%E5%86%8C"><span class="toc-text">3.GitHub的注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8GitHub%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">4.在GitHub上创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E4%B8%8A%E4%BC%A0GitHub"><span class="toc-text">5.利用hexo创建博客并上传GitHub</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%95%E5%8F%8C%E5%88%86%E6%94%AF"><span class="toc-text">1.单双分支</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89if%E8%AF%AD%E5%8F%A5"><span class="toc-text">（1）if语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E8%BE%93%E5%87%BAchar%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%A5%E5%8F%97"><span class="toc-text">(2)输出char类型的字符，如何接受</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </article>
   
@@ -248,6 +261,10 @@
   <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
   <div class="tags-list">
     
+    <a href="\tags\java学习" title="java学习"><div class="tags-list-item">java学习</div></a>
+    
+    <a href="\tags\博客的搭建" title="博客的搭建"><div class="tags-list-item">博客的搭建</div></a>
+    
   </div>
 </div>
   </article>
@@ -261,7 +278,7 @@
   
   <article class="card card-content toc-card">
     <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-node%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">1.node的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">2.git的下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GitHub%E7%9A%84%E6%B3%A8%E5%86%8C"><span class="toc-text">3.GitHub的注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8GitHub%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">4.在GitHub上创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E4%B8%8A%E4%BC%A0GitHub"><span class="toc-text">5.利用hexo创建博客并上传GitHub</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%95%E5%8F%8C%E5%88%86%E6%94%AF"><span class="toc-text">1.单双分支</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89if%E8%AF%AD%E5%8F%A5"><span class="toc-text">（1）if语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E8%BE%93%E5%87%BAchar%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%A5%E5%8F%97"><span class="toc-text">(2)输出char类型的字符，如何接受</span></a></li></ol></li></ol></li></ol></li></ol>
   </article>
   
   
@@ -271,18 +288,23 @@
   <div class="recent-posts-list">
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-11-17</div>
-        <a href="/2021/11/17/java单双分支/"><div class="recent-posts-item-content"></div></a>
+        <div class="recent-posts-item-title">2021-11-22</div>
+        <a href="/2021/11/22/java-语句中Switch语句的注意事项/"><div class="recent-posts-item-content">java 语句中Switch语句的注意事项</div></a>
       </div>
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-11-13</div>
-        <a href="/2021/11/13/如何使用hexo搭建博客并部署到GitHub/"><div class="recent-posts-item-content"></div></a>
+        <div class="recent-posts-item-title">2021-11-21</div>
+        <a href="/2021/11/21/博客编写常见错误/"><div class="recent-posts-item-content">博客编写常见错误</div></a>
       </div>
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-11-12</div>
-        <a href="/2021/11/12/first/"><div class="recent-posts-item-content">java笔记</div></a>
+        <div class="recent-posts-item-title">2021-11-21</div>
+        <a href="/2021/11/21/如何使用hexo搭建博客并部署到Github-0/"><div class="recent-posts-item-content">如何使用hexo搭建博客并部署到Github</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-11-21</div>
+        <a href="/2021/11/21/java学习，if语句的单双分支/"><div class="recent-posts-item-content">java学习，if语句的单双分支</div></a>
       </div>
     
   </div>

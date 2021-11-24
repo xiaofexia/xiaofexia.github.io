@@ -132,18 +132,18 @@
 <article class="card card-content">
   <header>
     <h1 class="post-title">
-      java笔记
+      java 语句中Switch语句的注意事项
     </h1>
   </header>
   <div class="post-meta post-show-meta">
-    <time datetime="2021-11-12T07:09:11.000Z" style="display: flex; align-items: center;">
+    <time datetime="2021-11-22T14:06:55.000Z" style="display: flex; align-items: center;">
       <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
-      <span>2021-11-12</span>
+      <span>2021-11-22</span>
     </time>
     
     
     <span class="dot"></span>
-    <span>309 字</span>
+    <span>415 字</span>
     
   </div>
   
@@ -159,15 +159,27 @@
   
   </header>
   <div id="section" class="post-content">
-    <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><pre class="highlight"><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">logicoperator</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(a &gt; <span class="number">20</span> &amp;&amp; a &lt; <span class="number">50</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok100&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> age = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(age &gt; <span class="number">20</span> &amp; age &lt; <span class="number">50</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok200&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> b = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">if</span>(b &lt; <span class="number">1</span> &amp;&amp; ++b &lt; <span class="number">5</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok300&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(b);</span><br><span class="line">		<span class="comment">// 对于&amp;&amp;短路与而言，如果第一个条件为false，后面的条件不会在判断</span></span><br><span class="line">		<span class="comment">// 对于&amp;逻辑与而言，如果第一个条件为false，后面的条件仍然会判断</span></span><br><span class="line">		<span class="keyword">int</span> c = <span class="number">3</span>;</span><br><span class="line">		<span class="keyword">if</span>(c &lt; <span class="number">1</span> &amp; ++c &lt; <span class="number">5</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok300&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(c);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> d = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(d &gt; <span class="number">20</span> || d &lt; <span class="number">25</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok400&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> e = <span class="number">30</span>;</span><br><span class="line">		<span class="keyword">if</span>(e &gt; <span class="number">20</span> | e &lt; <span class="number">23</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok500&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 对于||短路或而言，如果第一个条件为true，后面的条件不会在判断,最终结果为true，效率高</span></span><br><span class="line">		<span class="comment">// 对于|逻辑或而言，不管第一个条件是否为true，后面的条件仍然会判断，效率低</span></span><br><span class="line">		<span class="keyword">int</span> f = <span class="number">4</span>;</span><br><span class="line">		<span class="keyword">int</span> h = <span class="number">9</span>;</span><br><span class="line">		<span class="keyword">if</span>(f &gt; <span class="number">1</span> || ++h &gt; <span class="number">4</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok600&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(h);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> g = <span class="number">4</span>;</span><br><span class="line">		<span class="keyword">int</span> y = <span class="number">9</span>;</span><br><span class="line">		<span class="keyword">if</span>(g &gt; <span class="number">1</span> | ++y &gt; <span class="number">4</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;ok700&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(y);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre>
-
+    <h3 id="Switch语句的注意事项"><a href="#Switch语句的注意事项" class="headerlink" title="Switch语句的注意事项"></a>Switch语句的注意事项</h3><p>1.表达式数据类型，应和case后的常量类型一致，或者是可以自动转成可以相互比较类型，比如输入的是字符，而常量是int</p>
+<blockquote>
+<p>char类型是可以转换为String类型的，例如下面语句为正确：</p>
+<pre class="highlight"><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(day)&#123;</span><br><span class="line">			<span class="comment">//在java中，只要有返回值，就是一个表达式</span></span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期一&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">			<span class="comment">//如果没有break语句，则直接执行case 20 :</span></span><br><span class="line">			<span class="comment">//语句里面的代码块</span></span><br><span class="line">			<span class="keyword">case</span> <span class="number">20</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期二&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;<span class="comment">//退出switch语句，但不是退出程序</span></span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;<span class="comment">//default后面的break可以省略</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//char day = &#x27;a&#x27;;//char类型的定义</span></span><br><span class="line"><span class="comment">//String day = &quot;ab&quot;;//字符串类型的定义</span></span><br></pre>
+</blockquote>
+<p> 2.Switch(表达式)中表达式的返回值必须是：(byte,short,int,char,enum[枚举],String)</p>
+<ol start="3">
+<li><p>case子句中的值必须是常量或者是常量表达式,而不能是变量</p>
+<pre class="highlight"><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="keyword">char</span> c1 = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(day)&#123;</span><br><span class="line">			<span class="comment">//在java中，只要有返回值，就是一个表达式</span></span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期一&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> c1 :<span class="comment">//c1为变量，所以case c1 :错误</span></span><br><span class="line">			System.out.println(<span class="string">&quot;星期二&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>+<span class="number">1</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期三&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></li>
+<li><p>default子句是可选的， 当没有匹配的case时，执行default,如果没有default语句，又没有匹配任何常量，则没有输出；</p>
+</li>
+<li><p>break语句用来在执行完一 个case分支后使程序跳出switch语句块; 如果没有写break,程序会顺序执行到switch结尾，除非遇到break语句</p>
+</li>
+</ol>
 
   </div>
   <div>
   
   <div class="post-note note-warning copyright" style="margin-top: 42px">
     <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/about">木槿</a></p>
-    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/12/first/">http://example.com/2021/11/12/first/</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/22/java-%E8%AF%AD%E5%8F%A5%E4%B8%ADSwitch%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">http://example.com/2021/11/22/java-%E8%AF%AD%E5%8F%A5%E4%B8%ADSwitch%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</a></p>
     <p><span style="font-weight: bold;">版权声明：</span></p>
   </div>
   
@@ -175,24 +187,24 @@
 </article>
 <div class="nav">
   
-  <div class="nav-item-prev">
-    <a href="/2021/11/21/java学习，if语句的单双分支/" class="nav-link">
-      <i class="iconfont icon-left nav-prev-icon"></i>
+  
+  <div class="nav-item-next">
+    <a href="/2021/11/21/博客编写常见错误/" class="nav-link">
       <div>
-        <div class="nav-label">上一篇</div>
+        <div class="nav-label">下一篇</div>
         
-        <div class="nav-title">java学习，if语句的单双分支 </div>
+        <div class="nav-title">博客编写常见错误 </div>
         
       </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
     </a>
   </div>
-  
   
 </div>
 
 <div class="card card-content toc-card" id="mobiletoc">
   <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">Switch语句的注意事项</span></a></li></ol>
 </div></main>
           <aside class="left-column">
             
@@ -225,7 +237,7 @@
   <article class="display-when-two-columns spacer">
     <div class="card card-content toc-card">
       <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">Switch语句的注意事项</span></a></li></ol>
     </div>
   </article>
   
@@ -261,7 +273,7 @@
   
   <article class="card card-content toc-card">
     <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">Switch语句的注意事项</span></a></li></ol>
   </article>
   
   
