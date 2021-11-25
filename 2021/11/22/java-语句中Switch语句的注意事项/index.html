@@ -143,7 +143,7 @@
     
     
     <span class="dot"></span>
-    <span>415 字</span>
+    <span>438 字</span>
     
   </div>
   
@@ -161,16 +161,16 @@
   <div id="section" class="post-content">
     <h3 id="Switch语句的注意事项"><a href="#Switch语句的注意事项" class="headerlink" title="Switch语句的注意事项"></a>Switch语句的注意事项</h3><p>1.表达式数据类型，应和case后的常量类型一致，或者是可以自动转成可以相互比较类型，比如输入的是字符，而常量是int</p>
 <blockquote>
-<p>char类型是可以转换为String类型的，例如下面语句为正确：</p>
+<p>char类型是可以转换为int类型的，例如下面语句为正确：</p>
 <pre class="highlight"><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(day)&#123;</span><br><span class="line">			<span class="comment">//在java中，只要有返回值，就是一个表达式</span></span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期一&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">			<span class="comment">//如果没有break语句，则直接执行case 20 :</span></span><br><span class="line">			<span class="comment">//语句里面的代码块</span></span><br><span class="line">			<span class="keyword">case</span> <span class="number">20</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期二&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;<span class="comment">//退出switch语句，但不是退出程序</span></span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;<span class="comment">//default后面的break可以省略</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//char day = &#x27;a&#x27;;//char类型的定义</span></span><br><span class="line"><span class="comment">//String day = &quot;ab&quot;;//字符串类型的定义</span></span><br></pre>
 </blockquote>
-<p> 2.Switch(表达式)中表达式的返回值必须是：(byte,short,int,char,enum[枚举],String)</p>
+<p> 2.Switch(表达式)中表达式的返回值必须是：(byte,short,int,char,enum[枚举],String)中的一种。</p>
 <ol start="3">
-<li><p>case子句中的值必须是常量或者是常量表达式,而不能是变量</p>
-<pre class="highlight"><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="keyword">char</span> c1 = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(day)&#123;</span><br><span class="line">			<span class="comment">//在java中，只要有返回值，就是一个表达式</span></span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期一&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> c1 :<span class="comment">//c1为变量，所以case c1 :错误</span></span><br><span class="line">			System.out.println(<span class="string">&quot;星期二&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>+<span class="number">1</span> :</span><br><span class="line">			System.out.println(<span class="string">&quot;星期三&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></li>
-<li><p>default子句是可选的， 当没有匹配的case时，执行default,如果没有default语句，又没有匹配任何常量，则没有输出；</p>
+<li><p>case语句中的值必须是常量或者是常量表达式,而不能是变量</p>
+<pre class="highlight"><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="keyword">char</span> c1 = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">		<span class="keyword">switch</span>(day)&#123;</span><br><span class="line">			<span class="comment">//在java中，只要有返回值，就是一个表达式</span></span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span> :<span class="comment">//常量</span></span><br><span class="line">			System.out.println(<span class="string">&quot;星期一&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> c1 :<span class="comment">//错误，c1为变量，所以case c1 :错误</span></span><br><span class="line">			System.out.println(<span class="string">&quot;星期二&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>+<span class="number">1</span> :<span class="comment">//常量表达式</span></span><br><span class="line">			System.out.println(<span class="string">&quot;星期三&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br></pre></li>
+<li><p>default子句是可选的， 当没有匹配的case时，执行default,如果没有default语句，又没有匹配任何常量，则没有输出，default后面的break语句可以删除。</p>
 </li>
-<li><p>break语句用来在执行完一 个case分支后使程序跳出switch语句块; 如果没有写break,程序会顺序执行到switch结尾，除非遇到break语句</p>
+<li><p>break语句用来在执行完一 个case分支后使程序跳出switch语句块; 如果没有写break,程序会顺序执行到switch结尾，除非遇到break语句。</p>
 </li>
 </ol>
 
@@ -186,6 +186,18 @@
   </div>
 </article>
 <div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/2021/11/24/常见的快捷键/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">常见的快捷键 </div>
+        
+      </div>
+    </a>
+  </div>
   
   
   <div class="nav-item-next">
@@ -216,7 +228,7 @@
 <p class="author-description">designed by xiaofexia</p>
 <div class="author-message">
   <a class="author-posts-count" href="/archives">
-    <span>5</span>
+    <span>7</span>
     <span>文章</span>
   </a>
   <a class="author-categories-count" href="/categories">
@@ -224,7 +236,7 @@
     <span>分类</span>
   </a>
   <a class="author-tags-count" href="/tags">
-    <span>2</span>
+    <span>3</span>
     <span>标签</span>
   </a>
 </div>
@@ -258,6 +270,8 @@
     
     <a href="\tags\java学习" title="java学习"><div class="tags-list-item">java学习</div></a>
     
+    <a href="\tags\快捷键" title="快捷键"><div class="tags-list-item">快捷键</div></a>
+    
     <a href="\tags\博客的搭建" title="博客的搭建"><div class="tags-list-item">博客的搭建</div></a>
     
   </div>
@@ -283,6 +297,16 @@
   <div class="recent-posts-list">
     
       <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-11-24</div>
+        <a href="/2021/11/24/For循环的注意事项/"><div class="recent-posts-item-content">For循环的注意事项</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-11-24</div>
+        <a href="/2021/11/24/常见的快捷键/"><div class="recent-posts-item-content">常见的快捷键</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
         <div class="recent-posts-item-title">2021-11-22</div>
         <a href="/2021/11/22/java-语句中Switch语句的注意事项/"><div class="recent-posts-item-content">java 语句中Switch语句的注意事项</div></a>
       </div>
@@ -290,16 +314,6 @@
       <div class="recent-posts-item">
         <div class="recent-posts-item-title">2021-11-21</div>
         <a href="/2021/11/21/博客编写常见错误/"><div class="recent-posts-item-content">博客编写常见错误</div></a>
-      </div>
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-11-21</div>
-        <a href="/2021/11/21/如何使用hexo搭建博客并部署到Github-0/"><div class="recent-posts-item-content">如何使用hexo搭建博客并部署到Github</div></a>
-      </div>
-    
-      <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2021-11-21</div>
-        <a href="/2021/11/21/java学习，if语句的单双分支/"><div class="recent-posts-item-content">java学习，if语句的单双分支</div></a>
       </div>
     
   </div>

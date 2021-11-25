@@ -128,35 +128,83 @@
     <div class="section-wrap">
       <div class="container">
         <div class="columns">
-          <main class="main-column"><div class="card card-content tag-page-card">
-  <div class="tags-page-title">标签&nbsp-&nbsp博客的搭建</div>
-</div>
-<div class="archive-timeline">
-  
-  
+          <main class="main-column">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      For循环的注意事项
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2021-11-24T10:44:45.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2021-11-24</span>
+    </time>
     
-      <div class="archive-timeline-tag"><span>2021</span></div>
+    
+    <span class="dot"></span>
+    <span>420 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
       
-    
-    <div class="archive-timeline-item">
-      <div class="archive-timeline-post">
-        <div class="card card-content">
-          <div class="archive-timeline-post-date">2021-11-21</div>
-          <div class="archive-timeline-post-content"><a href="/2021/11/21/博客编写常见错误/" class="archive-timeline-post-item">博客编写常见错误</a></div>
-        </div>
-      </div>
+      
+        <a href="/tags/java学习/" class="post-meta-link">java学习</a>
+      
     </div>
+  </div>
   
-    
-    <div class="archive-timeline-item">
-      <div class="archive-timeline-post">
-        <div class="card card-content">
-          <div class="archive-timeline-post-date">2021-11-21</div>
-          <div class="archive-timeline-post-content"><a href="/2021/11/21/如何使用hexo搭建博客并部署到Github-0/" class="archive-timeline-post-item">如何使用hexo搭建博客并部署到Github</a></div>
-        </div>
+  </header>
+  <div id="section" class="post-content">
+    <h2 id="①If语句的注意事项"><a href="#①If语句的注意事项" class="headerlink" title="①If语句的注意事项"></a>①If语句的注意事项</h2><p>1.循环条件是返回一个布尔值的表达式</p>
+<pre class="highlight"><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span> ; i++)&#123;</span><br><span class="line">            <span class="comment">// i &lt;= 10; 返回是一个布尔值</span></span><br><span class="line">			System.out.println(<span class="string">&quot;For循环语句细节&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//System.out.println(&quot;i的值为&quot; + i);语句是错的</span></span><br></pre>
+
+<p>将i定义在循环条件中，i变量的使用只能在循环体中，其他地方不能使用。</p>
+<p>2.for(;循环判断条件;)</p>
+<p>初始化和变量迭代可以写到其它地方，但是两边的分号不能省略。</p>
+<pre class="highlight"><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (; i &lt;= <span class="number">10</span> ; )&#123;</span><br><span class="line">            <span class="comment">// i &lt;= 10; 返回是一个布尔值</span></span><br><span class="line">			System.out.println(<span class="string">&quot;For循环语句细节&quot;</span>);</span><br><span class="line">            i++;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;i的值为&quot;</span> + i);<span class="comment">//正确 i=11</span></span><br><span class="line"><span class="comment">//for (; ; )无限循环</span></span><br></pre>
+
+<p>将i的定义放在循环体的外面，是为了在循环体以外的代码中i变量也能够使用。</p>
+<p>3.循环初始值可以有多条初始化语句，但要求类型一样，并且中间用逗号隔开，循环变量迭代也可以有多条变量迭代语句，中间用逗号隔开。</p>
+<pre class="highlight"><span class="line"><span class="keyword">int</span> count = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>; i &lt; count ; i++, j += <span class="number">2</span>)&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;i=&quot;</span> + i + <span class="string">&quot;j=&quot;</span> + j);</span><br><span class="line">&#125;<span class="comment">// i = 2 , j = 4</span></span><br></pre>
+
+<h2 id="②编程思想"><a href="#②编程思想" class="headerlink" title="②编程思想"></a>②编程思想</h2><pre class="highlight"><span class="line"><span class="comment">//编程思想：</span></span><br><span class="line"><span class="comment">//1.化繁为简：即将复杂的需求，拆解</span></span><br><span class="line"><span class="comment">//成简单的需求，逐步完成</span></span><br><span class="line"><span class="comment">//2.先死后活：先考虑固定的值，然后转成灵活</span></span><br><span class="line"><span class="comment">//变换的值</span></span><br><span class="line"><span class="comment">//1.化繁为简</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt;= <span class="number">10</span>; x++)&#123;</span><br><span class="line">			System.out.println(x);</span><br><span class="line">    <span class="comment">//10+ 0=10,9+1=10.....</span></span><br><span class="line"><span class="comment">//2.先死后活：</span></span><br><span class="line"><span class="keyword">int</span> all = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt;= all; x++)&#123;</span><br><span class="line">			System.out.println(x + <span class="string">&quot;+&quot;</span> + (all - x) + <span class="string">&quot;=&quot;</span> + all);</span><br><span class="line">		&#125;</span><br></pre>
+
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/about">木槿</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="http://example.com/2021/11/24/For%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">http://example.com/2021/11/24/For%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span></p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  
+  <div class="nav-item-next">
+    <a href="/2021/11/24/常见的快捷键/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">常见的快捷键 </div>
+        
       </div>
-    </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
   
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A0If%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">①If语句的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A1%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><span class="toc-text">②编程思想</span></a></li></ol>
 </div></main>
           <aside class="left-column">
             
@@ -186,6 +234,13 @@
             <div class="sticky-tablet">
   
   
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A0If%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">①If语句的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A1%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><span class="toc-text">②编程思想</span></a></li></ol>
+    </div>
+  </article>
+  
   
   <article class="card card-content">
     <div class="categories-card">
@@ -203,67 +258,25 @@
     
     <a href="\tags\java学习" title="java学习"><div class="tags-list-item">java学习</div></a>
     
-    <a href="\tags\博客的搭建" title="博客的搭建"><div class="tags-list-item">博客的搭建</div></a>
-    
     <a href="\tags\快捷键" title="快捷键"><div class="tags-list-item">快捷键</div></a>
     
-  </div>
-</div>
-  </article>
-  
-  
-  <article class="card card-content widescreen-archive">
-    <div class="archive-card">
-  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
-  <div class="archive-card-list">
-    
-    
-    
-      
-        
-        
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-    
-      <a href="/archives/2021" class="archive-card-list-item">
-          2021
-          <span class="archive-card-list-item-badge">7</span>
-      </a>
+    <a href="\tags\博客的搭建" title="博客的搭建"><div class="tags-list-item">博客的搭建</div></a>
     
   </div>
 </div>
   </article>
+  
   
 </div>
           </aside>
           <aside class="right-column">
             <div class="sticky-widescreen">
   
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A0If%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">①If语句的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%91%A1%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><span class="toc-text">②编程思想</span></a></li></ol>
+  </article>
   
   
   <article class="card card-content">
@@ -295,53 +308,6 @@
 </div>
   </article>
   
-  
-  <article class="card card-content">
-    <div class="archive-card">
-  <div class="archive-card-header"><i class="iconfont icon-wodebaobiao" style="padding-right: 2px;"></i>归档</div>
-  <div class="archive-card-list">
-    
-    
-    
-      
-        
-        
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-    
-      <a href="/archives/2021" class="archive-card-list-item">
-          2021
-          <span class="archive-card-list-item-badge">7</span>
-      </a>
-    
-  </div>
-</div>
-  </article>
   
 </div>
           </aside>
